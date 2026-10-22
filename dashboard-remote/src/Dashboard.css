@@ -1,0 +1,123 @@
+.dashboard-mfe {
+  color: #1b2938;
+}
+
+.dashboard-mfe__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.dashboard-mfe__heading h1 {
+  margin: 0 0 8px;
+  font-size: 26px;
+}
+
+.dashboard-mfe__heading p,
+.dashboard-mfe__transaction p {
+  color: #718096;
+  font-size: 13px;
+}
+
+.dashboard-mfe__badge {
+  color: #226c4a;
+  background: #dff6e9;
+  padding: 8px 10px;
+  border-radius: 7px;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.dashboard-mfe__balance {
+  background: linear-gradient(120deg, #17466b, #102d48);
+  color: white;
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.dashboard-mfe__balance p,
+.dashboard-mfe__balance span {
+  color: #c5d7e6;
+  font-size: 13px;
+}
+
+.dashboard-mfe__balance h2 {
+  font-size: clamp(30px, 4vw, 40px);
+  margin: 12px 0;
+}
+
+.dashboard-mfe__stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.dashboard-mfe__stats article,
+.dashboard-mfe__panel {
+  background: white;
+  border: 1px solid #e8edf3;
+  border-radius: 13px;
+  padding: 24px;
+}
+
+.dashboard-mfe__stats article span {
+  display: block;
+  color: #718096;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.dashboard-mfe__stats article strong {
+  font-size: 21px;
+}
+
+.dashboard-mfe__positive {
+  color: #17834b;
+}
+
+.dashboard-mfe__panel h2 {
+  font-size: 17px;
+}
+
+.dashboard-mfe__transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.dashboard-mfe__transaction:last-child {
+  border-bottom: 0;
+}
+
+.dashboard-mfe__transaction p {
+  margin: 5px 0 0;
+}
+
+.dashboard-mfe__transaction strong {
+  font-size: 13px;
+}
+
+@media (max-width: 720px) {
+  .dashboard-mfe__heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard-mfe__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-mfe__balance,
+  .dashboard-mfe__stats article,
+  .dashboard-mfe__panel {
+    padding: 20px;
+  }
+}

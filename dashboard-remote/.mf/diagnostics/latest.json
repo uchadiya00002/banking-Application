@@ -1,0 +1,10 @@
+{
+  "latestErrorEvent": {
+    "code": "TYPE-001",
+    "message": "Failed to generate type declaration. Execute the below cmd to reproduce and fix the error. #TYPE-001\nargs: {\"cmd\":\"/home/asus/.nvm/versions/node/v22.22.0/bin/node /home/asus/Desktop/study/Microfrontend-practice/dashboard-remote/node_modules/typescript/bin/tsc --project /home/asus/Desktop/study/Microfrontend-practice/dashboard-remote/node_modules/.federation/tsconfig.1b669acedbe8b1b9c8295baea3b6d105.json\"}\nView the docs to see how to solve: https://module-federation.io/guide/troubleshooting/type#type-001",
+    "args": {
+      "cmd": "/home/asus/.nvm/versions/node/v22.22.0/bin/node /home/asus/Desktop/study/Microfrontend-practice/dashboard-remote/node_modules/typescript/bin/tsc --project /home/asus/Desktop/study/Microfrontend-practice/dashboard-remote/node_modules/.federation/tsconfig.1b669acedbe8b1b9c8295baea3b6d105.json"
+    },
+    "timestamp": 1792655351844
+  }
+}

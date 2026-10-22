@@ -1,0 +1,62 @@
+.transfers-mfe {
+  max-width: 680px;
+  padding: 24px;
+  border: 1px solid #e8edf3;
+  border-radius: 13px;
+  background: white;
+  color: #1b2938;
+}
+
+.transfers-mfe h1 {
+  font-size: 26px;
+  margin-top: 0;
+}
+
+.transfers-mfe p {
+  color: #718096;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.transfers-mfe form {
+  display: grid;
+  gap: 10px;
+}
+
+.transfers-mfe label {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.transfers-mfe input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d5dee8;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.transfers-mfe button {
+  margin-top: 14px;
+  padding: 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #17466b;
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.transfers-mfe button:hover {
+  background: #102d48;
+}
+
+.transfers-mfe .transfers-error {
+  color: #b42318;
+}
+
+.transfers-mfe .transfers-notice {
+  margin-top: 22px;
+}
