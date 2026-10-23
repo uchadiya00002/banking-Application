@@ -1,4 +1,4 @@
-type Page = "dashboard" | "transactions" | "transfers" | "profile";
+export type Page = "dashboard" | "transactions" | "transfers" | "profile";
 
 type SidebarProps = {
   activePage: Page;

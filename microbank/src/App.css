@@ -114,17 +114,13 @@
   font-weight: 500;
 }
 
-.avatar-small,
-.profile-avatar {
+.avatar-small {
   display: grid;
   place-items: center;
   border-radius: 50%;
   background: #dce9f7;
   color: #244f7b;
   font-weight: 700;
-}
-
-.avatar-small {
   width: 36px;
   height: 36px;
   font-size: 12px;
@@ -142,61 +138,7 @@
   margin-bottom: 28px;
 }
 
-.page-heading {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 24px;
-}
-
-.page-heading p {
-  margin-bottom: 0;
-}
-
-.demo-badge {
-  font-size: 10px;
-  letter-spacing: 0.8px;
-  font-weight: 700;
-  color: #226c4a;
-  background: #dff6e9;
-  padding: 8px 10px;
-  border-radius: 7px;
-}
-
-.balance-card {
-  padding: 30px;
-  border-radius: 16px;
-  background: linear-gradient(120deg, #17466b, #102d48);
-  color: white;
-  margin-bottom: 20px;
-}
-
-.balance-card p {
-  color: #c5d7e6;
-  margin-bottom: 12px;
-  font-size: 13px;
-}
-
-.balance-card h2 {
-  font-size: clamp(30px, 4vw, 40px);
-  letter-spacing: -1.5px;
-  margin: 0 0 14px;
-}
-
-.balance-card .account-number {
-  margin: 0;
-  font-size: 12px;
-}
-
-.stat-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  margin-bottom: 24px;
-}
-
-.stat-card,
+/* Suspense fallback while a remote loads */
 .panel {
   background: white;
   border: 1px solid #e8edf3;
@@ -204,117 +146,26 @@
   padding: 24px;
 }
 
-.stat-card span,
-.profile-field span {
-  color: #718096;
-  font-size: 12px;
-}
-
-.stat-card h3 {
-  margin: 12px 0 0;
-  font-size: 22px;
-}
-
-.positive {
-  color: #17834b;
-}
-
-.panel h2 {
-  margin-bottom: 12px;
-}
-
-.transaction-row {
+.transfer-notice {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  padding: 18px 0;
-  border-bottom: 1px solid #edf1f5;
-}
-
-.transaction-row:last-child {
-  border-bottom: 0;
-}
-
-.transaction-row strong {
-  font-size: 13px;
-}
-
-.transaction-row p {
-  font-size: 11px;
-  margin: 5px 0 0;
-}
-
-.form-panel {
-  max-width: 680px;
-}
-
-.form-panel > p {
-  margin-bottom: 24px;
-}
-
-.form-panel form {
-  display: grid;
-  gap: 10px;
-}
-
-.form-panel label {
-  font-size: 13px;
-  font-weight: 600;
-  margin-top: 10px;
-}
-
-.form-panel input {
-  border: 1px solid #d5dee8;
-  border-radius: 8px;
-  padding: 13px;
-  color: #1b2938;
-  background: white;
-  width: 100%;
-}
-
-.primary-button {
-  border: 0;
-  border-radius: 8px;
-  background: #17466b;
-  color: white;
-  padding: 14px;
-  margin-top: 14px;
-  font-weight: 600;
-}
-
-.primary-button:hover {
-  background: #102d48;
-}
-
-.form-message {
-  margin-top: 18px;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  border: 1px solid #b7e4c7;
+  border-radius: 10px;
+  background: #eaf8ef;
   color: #226c4a;
   font-size: 13px;
 }
 
-.notice {
-  margin-top: 24px;
-  font-size: 12px;
-}
-
-.profile-avatar {
-  width: 68px;
-  height: 68px;
+.transfer-notice button {
+  border: 0;
+  background: transparent;
+  color: inherit;
   font-size: 20px;
-  margin: 24px 0;
-}
-
-.profile-field {
-  display: grid;
-  gap: 8px;
-  padding: 18px 0;
-  border-bottom: 1px solid #edf1f5;
-}
-
-.profile-field strong {
-  font-size: 14px;
-  overflow-wrap: anywhere;
+  cursor: pointer;
 }
 
 @media (max-width: 720px) {
@@ -346,33 +197,4 @@
   .page-content {
     padding: 24px 16px 40px;
   }
-
-  .stat-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .page-heading {
-    align-items: flex-start;
-  }
-}
-.transfer-notice {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
-  padding: 14px 16px;
-  border: 1px solid #b7e4c7;
-  border-radius: 10px;
-  background: #eaf8ef;
-  color: #226c4a;
-  font-size: 13px;
-}
-
-.transfer-notice button {
-  border: 0;
-  background: transparent;
-  color: inherit;
-  font-size: 20px;
-  cursor: pointer;
 }
