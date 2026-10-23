@@ -12,6 +12,7 @@ export default defineConfig({
         "./Transfers": "./src/Transfers.tsx",
       },
       shared: ["react", "react-dom"],
+      dts: false,
     }),
   ],
   server: {
@@ -19,10 +20,10 @@ export default defineConfig({
     strictPort: true,
     origin: "http://localhost:5002",
   },
-  // preview: {
-  //   port: 5002,
-  //   strictPort: true,
-  // },
+  preview: {
+    port: 5002,
+    strictPort: true,
+  },
   build: {
     target: "esnext",
   },

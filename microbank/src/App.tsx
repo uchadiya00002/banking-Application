@@ -1,22 +1,22 @@
 import { lazy, Suspense, useState } from "react";
 import "./App.css";
-import Sidebar from "./components/Sidebar";
-import Profile from "./features/profile/Profile";
-import Transactions from "./features/transactions/Transactions";
-// import Transfers from "./features/transfers/Transfers";
-type Page = "dashboard" | "transactions" | "transfers" | "profile";
+import Sidebar, { type Page } from "./components/Sidebar";
 
 const Dashboard = lazy(() => import("dashboard/Dashboard"));
+const Transactions = lazy(() => import("transactions/Transactions"));
 const Transfers = lazy(() => import("transfers/Transfers"));
+const Profile = lazy(() => import("profile/Profile"));
+
+const pageTitles: Record<Page, string> = {
+  dashboard: "Overview",
+  transactions: "Transactions",
+  transfers: "Transfers",
+  profile: "Profile",
+};
+
 export default function App() {
   const [activePage, setActivePage] = useState<Page>("dashboard");
   const [notice, setNotice] = useState("");
-  const pageTitles: Record<Page, string> = {
-    dashboard: "Overview",
-    transactions: "Transactions",
-    transfers: "Transfers",
-    profile: "Profile",
-  };
 
   return (
     <div className="app-shell">
@@ -37,24 +37,20 @@ export default function App() {
           <Suspense
             fallback={
               <div className="panel" role="status">
-                Loading Dashboard Remote...
+                Loading {pageTitles[activePage]} Remote...
               </div>
             }
           >
             {activePage === "dashboard" && <Dashboard />}
-          </Suspense>
-          {activePage === "transactions" && <Transactions />}
-
-          <Suspense
-            fallback={<div className="panel">Loading Transfers Remote...</div>}
-          >
+            {activePage === "transactions" && <Transactions />}
             {activePage === "transfers" && (
-              <Transfers onTransferComplete={(message) => setNotice(message)} />
+              <Transfers onTransferComplete={setNotice} />
             )}
+            {activePage === "profile" && <Profile />}
           </Suspense>
-          {activePage === "profile" && <Profile />}
         </div>
       </main>
+
       {notice && (
         <div className="transfer-notice" role="status">
           {notice}

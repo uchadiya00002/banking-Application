@@ -12,6 +12,7 @@ export default defineConfig({
         "./Dashboard": "./src/Dashboard.tsx",
       },
       shared: ["react", "react-dom"],
+      dts: false,
     }),
   ],
   server: {

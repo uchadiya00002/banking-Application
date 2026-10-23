@@ -18,11 +18,26 @@ export default defineConfig({
           name: "transfers",
           entry: "http://localhost:5002/remoteEntry.js",
         },
+        profile: {
+          type: "module",
+          name: "profile",
+          entry: "http://localhost:5003/remoteEntry.js",
+        },
+        transactions: {
+          type: "module",
+          name: "transactions",
+          entry: "http://localhost:5004/remoteEntry.js",
+        },
       },
       shared: ["react", "react-dom"],
+      dts: false,
     }),
   ],
   server: {
+    port: 5000,
+    strictPort: true,
+  },
+  preview: {
     port: 5000,
     strictPort: true,
   },

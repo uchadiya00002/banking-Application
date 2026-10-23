@@ -5,6 +5,13 @@ declare module "dashboard/Dashboard" {
   export default Dashboard;
 }
 
+declare module "transactions/Transactions" {
+  import type { ComponentType } from "react";
+
+  const Transactions: ComponentType;
+  export default Transactions;
+}
+
 declare module "transfers/Transfers" {
   import type { ComponentType } from "react";
 
@@ -13,4 +20,11 @@ declare module "transfers/Transfers" {
   }>;
 
   export default Transfers;
+}
+
+declare module "profile/Profile" {
+  import type { ComponentType } from "react";
+
+  const Profile: ComponentType;
+  export default Profile;
 }
